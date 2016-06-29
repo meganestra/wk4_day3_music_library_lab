@@ -9,7 +9,6 @@ get '/album/new' do
 end
 
 post '/album' do
-
   @album = Album.new(params)
   @album.save
   erb(:'album/create')
@@ -21,12 +20,3 @@ get '/album' do
 end
 
 
-# post '/booking' do
-#   @guest = Guest.new(params)
-#   @guest.save()
-#   params['guest_id'] = @guest.id
-#   @booking = Booking.new(params)
-#   @booking.save()
-
-#   erb(:create)
-# end

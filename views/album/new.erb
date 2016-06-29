@@ -7,13 +7,9 @@
 
     <select name="artist_id">
       <% @artists.each do |artist| %>
-        <option value="<%= artist.id %>"><%=artist.name %></option>
+        <option value="<%= artist.id %>"><%= artist.name %></option>
     <% end %>
-
     </select>
-
-
-
 
     <input type="submit" value="Add album">
 

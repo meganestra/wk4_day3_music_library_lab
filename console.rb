@@ -9,11 +9,13 @@ require( 'pry-byebug' )
 # artist.save()
 
 
-# album1 = Album.new( { 'name' => 'Definitely Maybe', 'artist_id' => artist.id } )
-# album2 = Album.new( { 'name' => 'Whats the Story', 'artist_id' => artist.id} )
+# album1 = Album.new({ 'name' => 'Definitely Maybe', 'artist_id' => artist.id })
+# album2 = Album.new({ 'name' => 'Whats the Story', 'artist_id' => artist.id })
 
 # album1.save()
 # album2.save()
- get '/' do
 
- end
+get '/library' do
+  @artists = Artist.all()
+  erb(:'library/index')
+end
