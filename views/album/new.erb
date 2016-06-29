@@ -1,0 +1,20 @@
+<h1>Add an album to the library:</h1>
+
+  <form action="/album" method="post">
+    <label for="name">Album's name:</label>
+    <input type="text" name="name">
+    <br><br>
+
+    <select name="artist_id">
+      <% @artists.each do |artist| %>
+        <option value="<%= artist.id %>"><%=artist.name %></option>
+    <% end %>
+
+    </select>
+
+
+
+
+    <input type="submit" value="Add album">
+
+  </form>
